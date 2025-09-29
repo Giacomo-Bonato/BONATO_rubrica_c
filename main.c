@@ -17,11 +17,11 @@ void eliminaContatto(struct Contatto rubrica[], int *n);
 
 int main() {
     struct Contatto rubrica[MAX_CONTATTI];
-    int n = 0; // Numero contatti
+    int n = 0;
     int scelta;
 
     do {
-        printf("\n--- RUBRICA ---\n");
+        printf("\nRubrica\n");
         printf("1. Aggiungi contatto\n");
         printf("2. Visualizza tutti i contatti\n");
         printf("3. Ricerca contatto per cognome\n");
@@ -54,7 +54,6 @@ int main() {
     return 0;
 }
 
-// Aggiungi contatto
 void aggiungiContatto(struct Contatto rubrica[], int *n) {
     if (*n >= MAX_CONTATTI) {
         printf("Rubrica piena!\n");
@@ -71,7 +70,6 @@ void aggiungiContatto(struct Contatto rubrica[], int *n) {
     printf("Contatto aggiunto.\n");
 }
 
-// Visualizza tutti i contatti
 void visualizzaContatti(struct Contatto rubrica[], int n) {
     if (n == 0) {
         printf("Rubrica vuota.\n");
@@ -83,7 +81,6 @@ void visualizzaContatti(struct Contatto rubrica[], int n) {
     }
 }
 
-// Ricerca per cognome
 void cercaContatto(struct Contatto rubrica[], int n) {
     char cognome[30];
     printf("Cognome da cercare: ");
@@ -99,7 +96,6 @@ void cercaContatto(struct Contatto rubrica[], int n) {
     printf("Nessun contatto trovato con cognome %s.\n", cognome);
 }
 
-// Elimina per cognome
 void eliminaContatto(struct Contatto rubrica[], int *n) {
     char cognome[30];
     printf("Cognome da eliminare: ");
